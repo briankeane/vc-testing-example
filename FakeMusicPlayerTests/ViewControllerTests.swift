@@ -28,9 +28,6 @@ class ViewControllerTests: XCTestCase {
     XCTAssertEqual(vc.playButton.titleLabel!.text, "Play")
   }
   
-  
-  // Because you have to change the UI inside of a DispatchQueue.async call, you have to set the
-  // test up for async
   func testWhenPlayerStartsPlaying_changesButtonTextToStop() throws {
     mockAudioPlayer.simulatePlay()
     RunLoop.current.run(until: Date())
