@@ -30,7 +30,6 @@ class ViewControllerTests: XCTestCase {
   
   func testWhenPlayerStartsPlaying_changesButtonTextToStop() throws {
     mockAudioPlayer.simulatePlay()
-    RunLoop.current.run(until: Date())
     XCTAssertEqual(vc.playButton.titleLabel!.text!, "Stop")
   }
   
